@@ -1,0 +1,13 @@
+{
+  "name": "DataVisualization",
+  "version": "0.0.0",
+  "authors": [
+    "Michael Lambe <mic0331@gmail.com>"
+  ],
+  "description": "udacity project - data visualization",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "d3": "~3.5.5"
+  }
+}

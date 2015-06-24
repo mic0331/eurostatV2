@@ -1,0 +1,55 @@
+extends ../includes/layout
+
+block main-content    
+    .charts--container
+        ul
+            li.chart
+                h1.chart--subHeadline.chart--mainTitle
+                    | Average Tax Rates Per Countries from 2000 to 2014
+                h3.chart--subHeadline
+                    | (Select a country for more details )
+                #barChart
+                    svg#barChartSVG            
+
+            li.chart
+                h3#line-title.chart--subHeadline
+                    | Belgium Annual Average Earning
+                h2.chart--headline
+                    span.taxTitle
+                        | Taxes 
+                    | / 
+                    span.netTitle
+                        | Net 
+                    | Earnings History
+                #lineChart
+                    svg#lineChartSVG.lineChart--svg
+                        defs
+                            lineargradient#lineChart--gradientBackgroundArea--NET(x1='0', x2='0', y1='0', y2='1')
+                                stop.lineChart--gradientBackgroundArea--NET--top(offset='0%')
+                                stop.lineChart--gradientBackgroundArea--NET--bottom(offset='100%')
+                        defs
+                            lineargradient#lineChart--gradientBackgroundArea--TAX(x1='0', x2='0', y1='0', y2='1')
+                                stop.lineChart--gradientBackgroundArea--TAX--top(offset='0%')
+                                stop.lineChart--gradientBackgroundArea--TAX--bottom(offset='100%')        
+
+            li.chart
+                h3#pie-title.chart--subHeadline
+                    | Belgium Average Earning
+                h2#title.chart--headline
+                    | Year 
+                #pieChart
+                    svg#pieChartSVG
+                        defs
+                            filter#pieChartInsetShadow
+                                feoffset(dx='0', dy='0')
+                                    fegaussianblur(stddeviation='3', result='offset-blur')
+                                        fecomposite(operator='out', in='SourceGraphic', in2='offset-blur', result='inverse')
+                                            feflood(flood-color='black', flood-opacity='1', result='color')
+                                                fecomposite(operator='in', in='color', in2='inverse', result='shadow')
+                                                    fecomposite(operator='over', in='shadow', in2='SourceGraphic')
+                            filter#pieChartDropShadow
+                                fegaussianblur(in='SourceAlpha', stddeviation='3', result='blur')
+                                    feoffset(in='blur', dx='0', dy='3', result='offsetBlur')
+                                        femerge
+                                            femergenode
+                                                femergenode(in='SourceGraphic')
