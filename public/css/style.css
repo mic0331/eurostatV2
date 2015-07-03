@@ -266,3 +266,50 @@ rect:hover {
   cursor: pointer;
 }
 
+.text {
+  font-size: 28px;
+  font-family: Lato;
+  color: #666;
+  font-style: italic;
+}
+
+h4 {
+  margin-left: 10px;
+  margin-right: 50px;
+  text-align: justify;
+  font-weight: lighter;
+  color: grey;
+}
+
+h4.message {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.play-button {
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-style: italic;
+  cursor: pointer;
+  color: grey;
+}
+
+.buttons-container {
+  width: 800px;
+  margin-bottom: 5px;
+}
+
+.button {
+  float: left;
+  margin-left: 10px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: bold;
+}
+.clearfix {
+  clear: both;
+}
+

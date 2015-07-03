@@ -5,22 +5,31 @@ block main-content
         ul
             li.chart
                 h1.chart--subHeadline.chart--mainTitle
-                    | Average Tax Rates Per Countries from 2000 to 2014
-                h3.chart--subHeadline
-                    | (Select a country for more details )
+                    | Income tax rate per country
+                h3.chart--
+                    h4 
+                        | Income tax rates vary hugely between countries and depend highly on other factors like earnings, martial status and so on.  
+                    h4.message 
+                        | Where in Europe do people pay the highest slice of their earnings to the tax man ?  
+                    h4 
+                        | According to the 
+                        a(href="http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=earn_nt_net&lang=en") Eurostat
+                        |  organization, in 2013, a single person on an average salary without children will have the highest income tax rate in Belgium - some 42.1% of his or her earnings.  Germany isn't too far behind at 41.3%.  Neighbording Danemark comes in third with 40.6 %.
+                    h4 
+                        | In this StackedBar, noticed the inequalities contributions between countries.  Each bar is showing the tax rate per country as a combination of income taxes and employee's social security contribution.  Family allowances is not included as we only consider a single person on an average salary without children.                    
+                    .play-button ▶ PLAY ALL YEARS
+                    h4
+                        | Select a year or a country in order to see more details...
+                    .buttons-container
+                    .clearfix
                 #barChart
                     svg#barChartSVG            
 
             li.chart
                 h3#line-title.chart--subHeadline
-                    | Belgium Annual Average Earning
+                    | Taxes History evolution since 2000 till 2013.   
                 h2.chart--headline
-                    span.taxTitle
-                        | Taxes 
-                    | / 
-                    span.netTitle
-                        | Net 
-                    | Earnings History
+                    |  ... for Greece
                 #lineChart
                     svg#lineChartSVG.lineChart--svg
                         defs
@@ -30,26 +39,4 @@ block main-content
                         defs
                             lineargradient#lineChart--gradientBackgroundArea--TAX(x1='0', x2='0', y1='0', y2='1')
                                 stop.lineChart--gradientBackgroundArea--TAX--top(offset='0%')
-                                stop.lineChart--gradientBackgroundArea--TAX--bottom(offset='100%')        
-
-            li.chart
-                h3#pie-title.chart--subHeadline
-                    | Belgium Average Earning
-                h2#title.chart--headline
-                    | Year 
-                #pieChart
-                    svg#pieChartSVG
-                        defs
-                            filter#pieChartInsetShadow
-                                feoffset(dx='0', dy='0')
-                                    fegaussianblur(stddeviation='3', result='offset-blur')
-                                        fecomposite(operator='out', in='SourceGraphic', in2='offset-blur', result='inverse')
-                                            feflood(flood-color='black', flood-opacity='1', result='color')
-                                                fecomposite(operator='in', in='color', in2='inverse', result='shadow')
-                                                    fecomposite(operator='over', in='shadow', in2='SourceGraphic')
-                            filter#pieChartDropShadow
-                                fegaussianblur(in='SourceAlpha', stddeviation='3', result='blur')
-                                    feoffset(in='blur', dx='0', dy='3', result='offsetBlur')
-                                        femerge
-                                            femergenode
-                                                femergenode(in='SourceGraphic')
+                                stop.lineChart--gradientBackgroundArea--TAX--bottom(offset='100%')

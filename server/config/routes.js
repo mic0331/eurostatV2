@@ -7,6 +7,7 @@ module.exports = function(app) {
 
     app.use(apiBaseUrl + '/eurostat', require('../api/eurostat'));
     app.use(apiBaseUrl + '/mapping', require('../api/mapping'));
+    app.use(apiBaseUrl + '/ratio', require('../api/ratio'));
 
     app.all(apiBaseUrl + '/*', function(req, res, next) {
         //res.send(404);

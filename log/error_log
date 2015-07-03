@@ -1,0 +1,141 @@
+2015-06-26T12:43:42.371Z - Error Happened: 
+Error: Cannot GET /api/v1/ratio
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/config/routes.js:13:21
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at SendStream.error (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/serve-static/index.js:107:7)
+    at SendStream.emit (events.js:95:17)
+    at SendStream.error (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:250:17)
+    at SendStream.onStatError (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:346:48)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:606:16)
+    at onstat (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:595:14)
+    at Object.oncomplete (fs.js:107:15)
+2015-06-26T12:44:15.189Z - Error Happened: 
+Error: Cannot GET /api/v1/ratio
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/config/routes.js:13:21
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at SendStream.error (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/serve-static/index.js:107:7)
+    at SendStream.emit (events.js:95:17)
+    at SendStream.error (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:250:17)
+    at SendStream.onStatError (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:346:48)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:606:16)
+    at onstat (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:595:14)
+    at Object.oncomplete (fs.js:107:15)
+2015-06-26T12:58:33.207Z - Error Happened: 
+Error: Cannot GET /api/v1/eurostat/basic/countries/2014
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/config/routes.js:14:21
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:603:15
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:246:14)
+    at Function.proto.handle (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:166:3)
+    at router (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:35:12)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at trim_prefix (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:302:13)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:270:7
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+2015-06-26T13:00:40.800Z - Error Happened: 
+ReferenceError: Eurostat is not defined
+    at exports.getByCountry (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/api/ratio/ratio.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:340:14)
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:356:14)
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:400:3)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at Function.proto.handle (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:166:3)
+    at router (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:35:12)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at trim_prefix (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:302:13)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:270:7
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+2015-06-26T13:00:44.397Z - Error Happened: 
+ReferenceError: Eurostat is not defined
+    at exports.getByCountry (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/api/ratio/ratio.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:340:14)
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:356:14)
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:400:3)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at Function.proto.handle (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:166:3)
+    at router (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:35:12)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at trim_prefix (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:302:13)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:270:7
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+2015-06-26T13:00:47.242Z - Error Happened: 
+ReferenceError: Eurostat is not defined
+    at exports.getByCountry (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/api/ratio/ratio.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:340:14)
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:356:14)
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:400:3)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at Function.proto.handle (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:166:3)
+    at router (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:35:12)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at trim_prefix (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:302:13)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:270:7
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+2015-06-26T13:00:59.763Z - Error Happened: 
+ReferenceError: Eurostat is not defined
+    at exports.getByCountry (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/api/ratio/ratio.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:340:14)
+    at param (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:356:14)
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:400:3)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at Function.proto.handle (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:166:3)
+    at router (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:35:12)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at trim_prefix (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:302:13)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:270:7
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+2015-06-26T13:15:20.643Z - Error Happened: 
+Error: Cannot GET /api/v1/ratioBE
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/server/config/routes.js:14:21
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:110:13)
+    at Route.dispatch (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/route.js:91:3)
+    at Layer.handle [as handle_request] (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/layer.js:82:5)
+    at /Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:267:22
+    at Function.proto.process_params (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:321:12)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/lib/router/index.js:261:10)
+    at SendStream.error (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/serve-static/index.js:107:7)
+    at SendStream.emit (events.js:95:17)
+    at SendStream.error (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:250:17)
+    at SendStream.onStatError (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:346:48)
+    at next (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:606:16)
+    at onstat (/Users/mic0331/Documents/TRAINING/Data Analysis/Courses/Nanodegree Data Analyst/Projects/eurostatV2/node_modules/express/node_modules/send/index.js:595:14)
+    at Object.oncomplete (fs.js:107:15)

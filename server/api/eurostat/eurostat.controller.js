@@ -48,7 +48,7 @@ exports.getNETforA1_50_all_countries = function(req, res) {
     Eurostat.find({
         'ecase.code': "A1_100", // "Single person without children, 100% of AW"
         'currency.code': "EUR",
-        'country.code': {$nin: ['EA17', 'EA18', 'EA19', 'EU15', 'EU25', 'EU27','EU28']},
+        'country.code': {$nin: ['EA17', 'EA18', 'EA19', 'EU15', 'EU25', 'EU27','EU28', 'HR', 'CY', 'JP', 'US']}, // croatia and cyprus were removed as we don't have enough info for those courntires
         'estruct.code': {$nin: ['GRS', 'SOC', 'FAM', 'TOTAL']}
     })
     .select('measure')

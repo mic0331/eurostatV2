@@ -5,9 +5,12 @@ from pymongo import MongoClient
 import ast
 import math
 import numpy as np
+import json
+import csv
 
 DATADIR = './data/'
 DATAFILE = 'earn_nt_net.tsv'
+DATAFILE_OUT = 'tax_ratio.csv'
 MAPPING = get_mapping()
 
 
@@ -57,7 +60,7 @@ def group_years(data, y_from, y_to):
             stat = []
             for k,v in line.items():
                 if k.isdigit():
-                    if int(k)>= y_from and int(k) <= y_to:
+                    if int(k) >= y_from and int(k) <= y_to:
                         stat.append({
                             "year": int(k),
                             # mark empty value with 0
@@ -108,6 +111,101 @@ def merge_data_label(data):
                     }
     return data            
 
+def build_ratio(data, do_csv = False):
+    if do_csv:
+        datafile = os.path.join(DATADIR, DATAFILE_OUT)
+        writer = csv.writer(open(datafile, 'w'))
+
+    out1 = []
+    for line in data:
+        for k, v in line.items():
+            if k == "estruct":
+                if v['code'] in ['TAX', 'NET', 'SOC', 'FAM']:
+                    out1.append(line)
+    out2 = []
+    for line in out1:
+        for k, v in line.items():
+            if k =="ecase":
+                if v['code'] == 'A1_100':
+                    out2.append(line)
+    out3 = []
+    for line in out2:
+        for k, v in line.items():
+            if k =="country":
+                if v['code'] not in ['EA17', 'EA19', 'EU15', 'EU25', 'EU27','EU28', 'HR', 'CY', 'JP', 'US']:
+                    out3.append(line)
+    out4 = []
+    for line in out3:
+        for k, v in line.items():
+            if k =="currency":
+                if v['code'] == 'EUR':
+                    out4.append(line)
+
+    countries = defaultdict(list)
+    for line in out4:
+        for k, v in line.items():
+            if k == 'country':
+                countries[v['code']].append(line)
+    out = []
+    for k,v in countries.items():
+        measures = defaultdict(list)
+        ecase = {}
+        country = {}
+        currency = {}
+        for metric in v:                
+            code = metric['estruct']['code']
+            for l in metric['measure']:
+                measures[str(l['year'])].append({
+                    code: l['data']
+                })
+            country = metric['country']
+            ecase = metric['ecase']
+            currency = metric['currency']
+
+        # compute the ratio
+        net = 0
+        tax = 0
+        soc = 0
+        fam = 0
+        ratios = {}
+        for kk, vv in measures.items(): 
+            for item in vv:
+                if 'NET' in item.keys():
+                    net = item['NET']
+                elif 'FAM' in item.keys():
+                    fam = item['FAM']
+                elif 'SOC' in item.keys():
+                    soc = item['SOC']
+                else:
+                    tax = item['TAX']
+            total = net + tax + fam + soc
+            tax_total = tax + fam + soc
+            ratio = tax_total/total
+            ratio_fam = fam/tax_total
+            ratio_soc = soc/tax_total
+            ratio_tax = tax/tax_total
+            ratios[kk] = ratio
+            vv.append({'tax_ratio' : ratio})        
+            vv.append({'tax_fam'   : ratio_fam}) 
+            vv.append({'tax_soc'   : ratio_soc})
+            vv.append({'tax_tax'   : ratio_tax})
+
+        out.append({
+            'country'   : country,
+            'ecase'     : ecase,
+            'currency'  : currency,
+            'measure'   : [{kk:vv} for kk, vv in measures.items()]
+        })
+
+        if do_csv:
+            for key in sorted(ratios):
+                writer.writerow([key, round(ratios[key], 2), country['description'], country['code']])
+
+
+    #print(json.dumps(out, sort_keys=True,
+    #             indent=4, separators=(',', ': ')))  
+    return out
+
 if __name__ == "__main__":
     data = []
     datafile = os.path.join(DATADIR, DATAFILE)
@@ -121,11 +219,17 @@ if __name__ == "__main__":
     data = group_years(data, y_from=2000, y_to=2014)
     # stage 4 :: label the feature
     data = merge_data_label(data)
-    # stage 4 :: replace NaN by the mean
+    # stage 5 :: replace NaN by the mean
     data = fillna(data)
+    #############################################################
+    # stage 6 :: build tax ratio per country / year // optional, produce a CSV for data exploration
+    ratios = build_ratio(data, do_csv = True)
+    #############################################################    
     # load the data per country
     inject_data_mongo(data, 'eurn_nt_nets')
     # load the mapping table
     inject_data_mongo(get_mapping(), 'mappings')
-
+    # load the ratio data in mongo
+    inject_data_mongo(ratios, 'ratios')
+    
 

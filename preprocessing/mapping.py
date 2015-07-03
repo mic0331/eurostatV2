@@ -168,7 +168,8 @@ def get_mapping():
                 },
                 {
                     "code":"DE",
-                    "label":"Germany (until 1990 former territory of the FRG)"
+                    # (until 1990 former territory of the FRG)
+                    "label":"Germany"
                 },
                 {
                     "code":"EE",
