@@ -17,28 +17,37 @@
             this.INTERVAL = null;
             this.BUTTONS = null;
             this.change();
-        },
-
-        // build the stack bar
-        drawBarChart: function( elementId, data ) {
-            var self = this;
-            var containerEl = document.getElementById( elementId ),
-                width       = containerEl.clientWidth,
-                height      = width * 0.4,
-                margin      = {
+            this.barChartContainer = {
+                get containerEl() {
+                    return document.getElementById( 'barChart' );    
+                },
+                get width() {
+                    return this.containerEl.clientWidth;
+                }, 
+                get height() {
+                    return this.width * 0.4
+                },
+                margin : {
                     top    : 25,
                     right  : 10,
                     left   : 40,
                     bottom : 100 
                 },
-                detailWidth  = 98,
-                detailHeight = 55,
-                detailMargin = 10,
+                detailWidth     : 98,
+                detailHeight    : 55,
+                detailMargin    : 10
+            }
+        },
+
+        // build the stack bar
+        drawBarChart: function() {
+            var self = this
+                containerEl = this.barChartContainer.containerEl,
                 x   = d3.scale.ordinal()
-                        .rangeRoundBands([0, width - detailWidth], .1),
+                        .rangeRoundBands([0, this.barChartContainer.width - this.barChartContainer.detailWidth], .1),
 
                 y   = d3.scale.linear()
-                        .rangeRound([height, 0]),
+                        .rangeRound([this.barChartContainer.height, 0]),
 
                 xAxis = d3.svg.axis()
                     .scale(x)
@@ -50,20 +59,20 @@
                     .tickFormat(d3.format("%")),
 
                 yAxisTicks = d3.svg.axis().scale( y )
-                    .tickSize( width - detailWidth )
+                    .tickSize( this.barChartContainer.width - this.barChartContainer.detailWidth )
                     .tickFormat( '' )
                     .orient( 'right' ),
 
-                container = d3.select( containerEl ),
+                container = d3.select( this.barChartContainer.containerEl ),
 
                 color = d3.scale.ordinal()
                     .range(["#98abc5", "#8a89a6"]);
 
-                svg = container.select( 'svg' )
-                    .attr("width", width)
-                    .attr("height", height + margin.top + margin.bottom)
-                        .append("g")
-                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");           
+            svg = container.select( 'svg' )
+                .attr("width", this.barChartContainer.width)
+                .attr("height", this.barChartContainer.height + this.barChartContainer.margin.top + this.barChartContainer.margin.bottom)
+                    .append("g")
+                .attr("transform", "translate(" + this.barChartContainer.margin.left + "," + this.barChartContainer.margin.top + ")");           
             x.domain( this.data.barChart.map(function(d) {return d.country.description}) )
 
             var max = d3.max(this.data.barChart, function(d) {
@@ -81,10 +90,10 @@
             })
 
             svg.append("g")
-              .attr("class", "x axis")
-              .attr("transform", "translate(0," + height + ")")
-              .call(xAxis)
-              .selectAll("text")  
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + this.barChartContainer.height + ")")
+                .call(xAxis)
+                .selectAll("text")  
                     .style("text-anchor", "end")
                     .attr("dx", "-.8em")
                     .attr("dy", ".15em")
@@ -96,13 +105,13 @@
                 .attr( 'class', 'lineChart--yAxisTicks' )
                 .call( yAxisTicks );
 
-            svg.append("g")
+            y_axis = svg.append("g")
                 .attr("class", "y axis")
-                .call(yAxis)
+                .call(yAxis)                
                 .append("text")
                    .attr("transform", "rotate(-90)")
                    .attr("y", 5)
-                   .attr("dy", ".71em")                  
+                   .attr("dy", ".71em")        
                    .style("text-anchor", "end")
                    .text("Tax Rate"); 
 
@@ -115,32 +124,14 @@
             bar.selectAll("rect")
                 .data(function(d) { return d.taxes; })       
                 .enter().append("rect")
-                .on("click", function(d) {
-                    // paint all countries in grey
-                    d3.selectAll(".g rect")
-                        .style('fill', "#ccc");
-                    var elem = d3.select(this).attr('label') // get the selected country
-                    var bars = d3.selectAll(".g rect") // select all segment for the country
-                        .filter(function(d) {return d.country.code == elem })
-                        .style("fill", function(d) { console.log(d); return"#804115";} )
-                    // set the current country as the one selected
-                    self.COUNTRY = {
-                        'code': d.country.code,
-                        'description': d.country.description
-                    } 
-                    // hide the legend
-                    svg.selectAll(".bar-legend")
-                        .style("visibility", "hidden");
-                    // stop the timer...
-                    self.playYears(false);
-                })             
+                .on("click", function(d) { self.onClick_barChart(d, this); })
                 .attr("y", function(d) {return y(d.y1); })
                 .attr("width", x.rangeBand())
                 .transition() // initial animation
                     .delay(function (d, i) {return d.y1*3000; })                                    
                 .attr("height", function(d) { return y(d.y0) - y(d.y1); })
                 .attr("label", function(d) {return d.country.code; })   
-                .style("fill", function(d) { return color(d.name); });
+                .style("fill", function(d) { return color(d.name); })
 
             var legend = svg.selectAll(".bar-legend")
                     .data(["Income Taxes", "Employee's Social security"])
@@ -161,23 +152,38 @@
                 .attr("dy", ".35em")
                 .style("text-anchor", "end")
                 .text(function(d) { return d; });   
-                    bar.exit().remove();         
-                },
+        },
 
-        updateBarData: function(elementId) {
+        onClick_barChart: function(d, this_) {
+            var elem = d3.select(this_).attr('label') // get the selected country
+            // reset the other country selected 
+            d3.selectAll(".g rect")
+                .style("fill", function(d) { return"#ccc";} )
+            var bars = d3.selectAll(".g rect") // select all segment for the country
+                .filter(function(d) {return d.country.code == elem })
+                .style("fill", function(d) { return"#804115";} )
+            // set the current country as the one selected
+            this.COUNTRY = {
+                'code': d.country.code,
+                'description': d.country.description
+            } 
+            // hide the legend
+            svg.selectAll(".bar-legend")
+                .style("visibility", "hidden");
+            // stop the timer...
+            this.playYears(false);
+        },
+
+        updateBarData: function() {
             // parse the data for the new year...
             this.parseBarData(null, this.YEAR);
             var self = this;
 
-            var containerEl = document.getElementById( elementId ),
-                width       = containerEl.clientWidth,
-                height      = width * 0.4,
-                detailWidth  = 98,
-                container = d3.select( containerEl ),
+            var container = d3.select( this.barChartContainer.containerEl ),
                 x   = d3.scale.ordinal()
-                        .rangeRoundBands([0, width - detailWidth], .1),
+                        .rangeRoundBands([0, this.barChartContainer.width - this.barChartContainer.detailWidth], .1),
                 y   = d3.scale.linear()
-                        .rangeRound([height, 0])
+                        .rangeRound([this.barChartContainer.height, 0])
                 xAxis = d3.svg.axis()
                     .scale(x)
                     .orient("bottom"),                    
@@ -222,31 +228,15 @@
 
             bar.enter().append("g")
                 .attr("class", "g")                
-                .attr("transform", function(d) { return "translate(" + x(d.country.description) + ",25)"; })              
+                .attr("transform", function(d) { 
+                    return "translate(" + x(d.country.description) + "," + self.barChartContainer.margin.top + ")"; 
+                })              
             
             bar.selectAll("rect")
                 .data(function(d) { return d.taxes; })                        
                 .enter().append("rect")
-                .on("click", function(d) {
-                    // paint all countries in grey
-                    d3.selectAll(".g rect")
-                        .style('fill', "#ccc");
-                    var elem = d3.select(this).attr('label') // get the selected country
-                    var bars = d3.selectAll(".g rect") // select all segment for the country
-                        .filter(function(d) {return d.country.code == elem })
-                        .style("fill", function(d) { return"#804115";} )
-                    // set the current country as the one selected
-                    self.COUNTRY = {
-                        'code': d.country.code,
-                        'description': d.country.description
-                    } 
-                    // hide the legend
-                    svg.selectAll(".bar-legend")
-                        .style("visibility", "hidden");
-                    // stop the timer...
-                    self.playYears(false);
-                }) 
-                .attr("x", 40)
+                .on("click", function(d) { self.onClick_barChart(d, this); })
+                .attr("x", this.barChartContainer.margin.left)
                 .attr("width", x.rangeBand())
                 .attr("y", function(d) {return y(d.y1); })   
                 .attr("label", function(d) {return d.country.code; })           
@@ -268,8 +258,10 @@
             // 4/ reset the selected button
             d3.select(".selected")
                 .classed("selected", false);
-            this.BUTTONS.filter(function(d) { return d == self.YEAR; })
+            if (this.BUTTONS) {
+                this.BUTTONS.filter(function(d) { return d == self.YEAR; })
                         .classed("selected", true);
+            }            
         },
 
         parseBarData: function(json, year) {
@@ -303,29 +295,30 @@
         playYears: function(status) {
             var self = this;
             if (status) {
-                // timer                
-                this.INTERVAL = setInterval(function() {                
+                f = function() {     
+                    // make sure the stackedbar chart legend is visible
+                    d3.selectAll(".bar-legend")
+                        .style("visibility", "visible");           
                     self.YEAR++;
-                    self.updateBarData('barChart');
+                    self.updateBarData();
                     if (self.YEAR >= 2013) {                    
                         self.YEAR = 1999;
                     }
-                }, 2000);
-                // make sure the stackedbar chart legend is visible
-                d3.selectAll(".bar-legend")
-                    .style("visibility", "visible");    
+                }
+                // timer                
+                this.INTERVAL = setInterval(f, 2000); 
+                f();
             } else {
                 clearInterval(self.INTERVAL);
             }
-            
-        },  
+        },
 
         // render the charts on the page
         render: function(jsondata, country) {
             var self = this;
             this.parseBarData(jsondata, this.YEAR);
             // build the first year
-            this.drawBarChart('barChart', this.data.barChart);
+            this.drawBarChart();
             // enable the year sequence
             this.playYears(true);
             // load the container with year's button
@@ -342,7 +335,7 @@
                 });
             this.BUTTONS.on("click", function(d) {
                 self.YEAR = d;
-                self.updateBarData('barChart')
+                self.updateBarData()
             });  
             var playButton = d3.select(".play-button")
                 .on("click", function() {
