@@ -335,7 +335,8 @@
                 });
             this.BUTTONS.on("click", function(d) {
                 self.YEAR = d;
-                self.updateBarData()
+                self.updateBarData();
+                self.playYears(false);
             });  
             var playButton = d3.select(".play-button")
                 .on("click", function() {
