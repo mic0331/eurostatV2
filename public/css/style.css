@@ -8,6 +8,7 @@ body {
   font-family: sans-serif;
   font-weight: 100;
   background-color: #ccc;
+  opacity: .8;
   background-image: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.5) 25%);
   background-size: 4px 4px;
 }
@@ -85,8 +86,14 @@ body ul, body li {
 
 .lineChart--areaLine--NET {
   fill: none;
-  stroke: #43857C;
+  /*stroke: #43857C;*/
   stroke-width: 3;
+}
+
+.lineChart--areaLine--background {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5;
 }
 
 .lineChart--areaLine--TAX {
@@ -97,7 +104,7 @@ body ul, body li {
 
 .lineChart--bubble--label--NET {
   fill: none;
-  stroke: #43857C;
+  /*stroke: #43857C;*/
   font-size: 12.6px;
   font-style: italic;
   font-weight: 100;
@@ -119,7 +126,7 @@ body ul, body li {
 }
 
 .lineChart--circle--NET {
-  fill: #43857C;
+  /*fill: #43857C;*/
   stroke: #fff;
   stroke-width: 3;
 }
@@ -314,3 +321,18 @@ h4.message {
   clear: both;
 }
 
+.g-text-annotation {
+  font-size: 11px;
+  font-family: Arial;
+  fill: #999;
+  text-anchor: middle;
+  pointer-events: none;
+  opacity: .5;
+}
+
+.g-mean-text {
+  pointer-events: none;
+  font-family: Helvetica, Arial;
+  text-anchor: middle;
+  font-size: 10px;
+}

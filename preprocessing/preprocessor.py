@@ -132,7 +132,7 @@ def build_ratio(data, do_csv = False):
     for line in out2:
         for k, v in line.items():
             if k =="country":
-                if v['code'] not in ['EA17', 'EA19', 'EU15', 'EU25', 'EU27','EU28', 'HR', 'CY', 'JP', 'US']:
+                if v['code'] not in ['EA17', 'EA18', 'EA19', 'EU15', 'EU25', 'EU27','EU28', 'HR', 'CY', 'JP', 'US']:
                     out3.append(line)
     out4 = []
     for line in out3:

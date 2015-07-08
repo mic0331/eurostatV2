@@ -1,108 +1,33 @@
-2000,0.39,Belgium,BE
-2001,0.43,Belgium,BE
-2002,0.43,Belgium,BE
-2003,0.42,Belgium,BE
-2004,0.42,Belgium,BE
-2005,0.42,Belgium,BE
-2006,0.42,Belgium,BE
-2007,0.42,Belgium,BE
-2008,0.42,Belgium,BE
-2009,0.42,Belgium,BE
-2010,0.43,Belgium,BE
-2011,0.43,Belgium,BE
-2012,0.43,Belgium,BE
-2013,0.42,Belgium,BE
-2014,0.42,Belgium,BE
-2000,0.26,Poland,PL
-2001,0.28,Poland,PL
-2002,0.28,Poland,PL
-2003,0.28,Poland,PL
-2004,0.28,Poland,PL
-2005,0.28,Poland,PL
-2006,0.29,Poland,PL
-2007,0.28,Poland,PL
-2008,0.25,Poland,PL
-2009,0.24,Poland,PL
-2010,0.24,Poland,PL
-2011,0.25,Poland,PL
-2012,0.25,Poland,PL
-2013,0.25,Poland,PL
-2014,0.25,Poland,PL
-2000,0.3,Austria,AT
-2001,0.31,Austria,AT
-2002,0.32,Austria,AT
-2003,0.32,Austria,AT
-2004,0.33,Austria,AT
-2005,0.33,Austria,AT
-2006,0.33,Austria,AT
-2007,0.34,Austria,AT
-2008,0.34,Austria,AT
-2009,0.33,Austria,AT
-2010,0.33,Austria,AT
-2011,0.34,Austria,AT
-2012,0.34,Austria,AT
-2013,0.34,Austria,AT
-2014,0.35,Austria,AT
-2000,0.27,Iceland,IS
-2001,0.23,Iceland,IS
-2002,0.25,Iceland,IS
-2003,0.26,Iceland,IS
-2004,0.28,Iceland,IS
-2005,0.28,Iceland,IS
-2006,0.28,Iceland,IS
-2007,0.27,Iceland,IS
-2008,0.27,Iceland,IS
-2009,0.26,Iceland,IS
-2010,0.28,Iceland,IS
-2011,0.28,Iceland,IS
-2012,0.29,Iceland,IS
-2013,0.28,Iceland,IS
-2014,0.28,Iceland,IS
-2000,0.26,United Kingdom,UK
-2001,0.26,United Kingdom,UK
-2002,0.26,United Kingdom,UK
-2003,0.27,United Kingdom,UK
-2004,0.27,United Kingdom,UK
-2005,0.27,United Kingdom,UK
-2006,0.27,United Kingdom,UK
-2007,0.27,United Kingdom,UK
-2008,0.26,United Kingdom,UK
-2009,0.25,United Kingdom,UK
-2010,0.25,United Kingdom,UK
-2011,0.25,United Kingdom,UK
-2012,0.25,United Kingdom,UK
-2013,0.24,United Kingdom,UK
-2014,0.24,United Kingdom,UK
-2000,0.26,Netherlands,NL
-2001,0.31,Netherlands,NL
-2002,0.31,Netherlands,NL
-2003,0.31,Netherlands,NL
-2004,0.33,Netherlands,NL
-2005,0.33,Netherlands,NL
-2006,0.32,Netherlands,NL
-2007,0.32,Netherlands,NL
-2008,0.33,Netherlands,NL
-2009,0.32,Netherlands,NL
-2010,0.32,Netherlands,NL
-2011,0.32,Netherlands,NL
-2012,0.32,Netherlands,NL
-2013,0.31,Netherlands,NL
-2014,0.31,Netherlands,NL
-2000,0.27,France,FR
-2001,0.29,France,FR
-2002,0.29,France,FR
-2003,0.29,France,FR
-2004,0.29,France,FR
-2005,0.29,France,FR
-2006,0.29,France,FR
-2007,0.28,France,FR
-2008,0.28,France,FR
-2009,0.28,France,FR
-2010,0.28,France,FR
-2011,0.28,France,FR
-2012,0.28,France,FR
-2013,0.28,France,FR
-2014,0.29,France,FR
+2000,0.22,Bulgaria,BG
+2001,0.2,Bulgaria,BG
+2002,0.2,Bulgaria,BG
+2003,0.19,Bulgaria,BG
+2004,0.19,Bulgaria,BG
+2005,0.21,Bulgaria,BG
+2006,0.2,Bulgaria,BG
+2007,0.21,Bulgaria,BG
+2008,0.22,Bulgaria,BG
+2009,0.22,Bulgaria,BG
+2010,0.21,Bulgaria,BG
+2011,0.22,Bulgaria,BG
+2012,0.22,Bulgaria,BG
+2013,0.22,Bulgaria,BG
+2014,0.21,Bulgaria,BG
+2000,0.13,Estonia,EE
+2001,0.14,Estonia,EE
+2002,0.15,Estonia,EE
+2003,0.16,Estonia,EE
+2004,0.16,Estonia,EE
+2005,0.16,Estonia,EE
+2006,0.18,Estonia,EE
+2007,0.2,Estonia,EE
+2008,0.19,Estonia,EE
+2009,0.2,Estonia,EE
+2010,0.19,Estonia,EE
+2011,0.2,Estonia,EE
+2012,0.2,Estonia,EE
+2013,0.19,Estonia,EE
+2014,0.2,Estonia,EE
 2000,0.17,Slovakia,SK
 2001,0.17,Slovakia,SK
 2002,0.17,Slovakia,SK
@@ -118,36 +43,201 @@
 2012,0.23,Slovakia,SK
 2013,0.23,Slovakia,SK
 2014,0.23,Slovakia,SK
-2000,0.28,Norway,NO
-2001,0.26,Norway,NO
-2002,0.27,Norway,NO
-2003,0.26,Norway,NO
-2004,0.26,Norway,NO
-2005,0.29,Norway,NO
-2006,0.29,Norway,NO
-2007,0.3,Norway,NO
-2008,0.3,Norway,NO
-2009,0.29,Norway,NO
-2010,0.29,Norway,NO
-2011,0.29,Norway,NO
-2012,0.29,Norway,NO
-2013,0.29,Norway,NO
-2014,0.29,Norway,NO
-2000,0.33,Euro area (18 countries),EA18
-2001,0.33,Euro area (18 countries),EA18
-2002,0.33,Euro area (18 countries),EA18
-2003,0.33,Euro area (18 countries),EA18
-2004,0.33,Euro area (18 countries),EA18
-2005,0.33,Euro area (18 countries),EA18
-2006,0.33,Euro area (18 countries),EA18
-2007,0.33,Euro area (18 countries),EA18
-2008,0.33,Euro area (18 countries),EA18
-2009,0.33,Euro area (18 countries),EA18
-2010,0.32,Euro area (18 countries),EA18
-2011,0.33,Euro area (18 countries),EA18
-2012,0.33,Euro area (18 countries),EA18
-2013,0.33,Euro area (18 countries),EA18
-2014,0.33,Euro area (18 countries),EA18
+2000,0.26,Netherlands,NL
+2001,0.31,Netherlands,NL
+2002,0.31,Netherlands,NL
+2003,0.31,Netherlands,NL
+2004,0.33,Netherlands,NL
+2005,0.33,Netherlands,NL
+2006,0.32,Netherlands,NL
+2007,0.32,Netherlands,NL
+2008,0.33,Netherlands,NL
+2009,0.32,Netherlands,NL
+2010,0.32,Netherlands,NL
+2011,0.32,Netherlands,NL
+2012,0.32,Netherlands,NL
+2013,0.31,Netherlands,NL
+2014,0.31,Netherlands,NL
+2000,0.3,Slovenia,SI
+2001,0.32,Slovenia,SI
+2002,0.32,Slovenia,SI
+2003,0.32,Slovenia,SI
+2004,0.32,Slovenia,SI
+2005,0.32,Slovenia,SI
+2006,0.33,Slovenia,SI
+2007,0.33,Slovenia,SI
+2008,0.33,Slovenia,SI
+2009,0.33,Slovenia,SI
+2010,0.33,Slovenia,SI
+2011,0.33,Slovenia,SI
+2012,0.33,Slovenia,SI
+2013,0.33,Slovenia,SI
+2014,0.33,Slovenia,SI
+2000,0.29,Lithuania,LT
+2001,0.29,Lithuania,LT
+2002,0.29,Lithuania,LT
+2003,0.26,Lithuania,LT
+2004,0.28,Lithuania,LT
+2005,0.28,Lithuania,LT
+2006,0.25,Lithuania,LT
+2007,0.25,Lithuania,LT
+2008,0.23,Lithuania,LT
+2009,0.22,Lithuania,LT
+2010,0.22,Lithuania,LT
+2011,0.22,Lithuania,LT
+2012,0.22,Lithuania,LT
+2013,0.23,Lithuania,LT
+2014,0.24,Lithuania,LT
+2000,0.26,United Kingdom,UK
+2001,0.26,United Kingdom,UK
+2002,0.26,United Kingdom,UK
+2003,0.27,United Kingdom,UK
+2004,0.27,United Kingdom,UK
+2005,0.27,United Kingdom,UK
+2006,0.27,United Kingdom,UK
+2007,0.27,United Kingdom,UK
+2008,0.26,United Kingdom,UK
+2009,0.25,United Kingdom,UK
+2010,0.25,United Kingdom,UK
+2011,0.25,United Kingdom,UK
+2012,0.25,United Kingdom,UK
+2013,0.24,United Kingdom,UK
+2014,0.24,United Kingdom,UK
+2000,0.3,Austria,AT
+2001,0.31,Austria,AT
+2002,0.32,Austria,AT
+2003,0.32,Austria,AT
+2004,0.33,Austria,AT
+2005,0.33,Austria,AT
+2006,0.33,Austria,AT
+2007,0.34,Austria,AT
+2008,0.34,Austria,AT
+2009,0.33,Austria,AT
+2010,0.33,Austria,AT
+2011,0.34,Austria,AT
+2012,0.34,Austria,AT
+2013,0.34,Austria,AT
+2014,0.35,Austria,AT
+2000,0.26,Luxembourg,LU
+2001,0.27,Luxembourg,LU
+2002,0.24,Luxembourg,LU
+2003,0.25,Luxembourg,LU
+2004,0.25,Luxembourg,LU
+2005,0.26,Luxembourg,LU
+2006,0.27,Luxembourg,LU
+2007,0.28,Luxembourg,LU
+2008,0.27,Luxembourg,LU
+2009,0.26,Luxembourg,LU
+2010,0.27,Luxembourg,LU
+2011,0.28,Luxembourg,LU
+2012,0.28,Luxembourg,LU
+2013,0.3,Luxembourg,LU
+2014,0.3,Luxembourg,LU
+2000,0.35,Hungary,HU
+2001,0.38,Hungary,HU
+2002,0.37,Hungary,HU
+2003,0.33,Hungary,HU
+2004,0.34,Hungary,HU
+2005,0.34,Hungary,HU
+2006,0.35,Hungary,HU
+2007,0.39,Hungary,HU
+2008,0.38,Hungary,HU
+2009,0.38,Hungary,HU
+2010,0.31,Hungary,HU
+2011,0.35,Hungary,HU
+2012,0.35,Hungary,HU
+2013,0.34,Hungary,HU
+2014,0.35,Hungary,HU
+2000,0.27,France,FR
+2001,0.29,France,FR
+2002,0.29,France,FR
+2003,0.29,France,FR
+2004,0.29,France,FR
+2005,0.29,France,FR
+2006,0.29,France,FR
+2007,0.28,France,FR
+2008,0.28,France,FR
+2009,0.28,France,FR
+2010,0.28,France,FR
+2011,0.28,France,FR
+2012,0.28,France,FR
+2013,0.28,France,FR
+2014,0.29,France,FR
+2000,0.16,Switzerland,CH
+2001,0.14,Switzerland,CH
+2002,0.15,Switzerland,CH
+2003,0.14,Switzerland,CH
+2004,0.15,Switzerland,CH
+2005,0.16,Switzerland,CH
+2006,0.16,Switzerland,CH
+2007,0.16,Switzerland,CH
+2008,0.16,Switzerland,CH
+2009,0.16,Switzerland,CH
+2010,0.16,Switzerland,CH
+2011,0.16,Switzerland,CH
+2012,0.17,Switzerland,CH
+2013,0.17,Switzerland,CH
+2014,0.17,Switzerland,CH
+2000,0.26,Italy,IT
+2001,0.28,Italy,IT
+2002,0.29,Italy,IT
+2003,0.28,Italy,IT
+2004,0.29,Italy,IT
+2005,0.28,Italy,IT
+2006,0.29,Italy,IT
+2007,0.29,Italy,IT
+2008,0.3,Italy,IT
+2009,0.3,Italy,IT
+2010,0.3,Italy,IT
+2011,0.31,Italy,IT
+2012,0.31,Italy,IT
+2013,0.31,Italy,IT
+2014,0.32,Italy,IT
+2000,0.18,Greece,EL
+2001,0.16,Greece,EL
+2002,0.17,Greece,EL
+2003,0.17,Greece,EL
+2004,0.18,Greece,EL
+2005,0.17,Greece,EL
+2006,0.18,Greece,EL
+2007,0.19,Greece,EL
+2008,0.19,Greece,EL
+2009,0.21,Greece,EL
+2010,0.23,Greece,EL
+2011,0.27,Greece,EL
+2012,0.27,Greece,EL
+2013,0.26,Greece,EL
+2014,0.25,Greece,EL
+2000,0.28,Finland,FI
+2001,0.33,Finland,FI
+2002,0.32,Finland,FI
+2003,0.32,Finland,FI
+2004,0.31,Finland,FI
+2005,0.31,Finland,FI
+2006,0.31,Finland,FI
+2007,0.3,Finland,FI
+2008,0.3,Finland,FI
+2009,0.29,Finland,FI
+2010,0.29,Finland,FI
+2011,0.29,Finland,FI
+2012,0.29,Finland,FI
+2013,0.3,Finland,FI
+2014,0.31,Finland,FI
+2000,0.27,Iceland,IS
+2001,0.23,Iceland,IS
+2002,0.25,Iceland,IS
+2003,0.26,Iceland,IS
+2004,0.28,Iceland,IS
+2005,0.28,Iceland,IS
+2006,0.28,Iceland,IS
+2007,0.27,Iceland,IS
+2008,0.27,Iceland,IS
+2009,0.26,Iceland,IS
+2010,0.28,Iceland,IS
+2011,0.28,Iceland,IS
+2012,0.29,Iceland,IS
+2013,0.28,Iceland,IS
+2014,0.28,Iceland,IS
 2000,0.2,Portugal,PT
 2001,0.21,Portugal,PT
 2002,0.23,Portugal,PT
@@ -178,81 +268,21 @@
 2012,0.19,Malta,MT
 2013,0.2,Malta,MT
 2014,0.18,Malta,MT
-2000,0.18,Greece,EL
-2001,0.16,Greece,EL
-2002,0.17,Greece,EL
-2003,0.17,Greece,EL
-2004,0.18,Greece,EL
-2005,0.17,Greece,EL
-2006,0.18,Greece,EL
-2007,0.19,Greece,EL
-2008,0.19,Greece,EL
-2009,0.21,Greece,EL
-2010,0.23,Greece,EL
-2011,0.27,Greece,EL
-2012,0.27,Greece,EL
-2013,0.26,Greece,EL
-2014,0.25,Greece,EL
-2000,0.17,Spain,ES
-2001,0.2,Spain,ES
-2002,0.2,Spain,ES
-2003,0.2,Spain,ES
-2004,0.2,Spain,ES
-2005,0.2,Spain,ES
-2006,0.2,Spain,ES
-2007,0.21,Spain,ES
-2008,0.19,Spain,ES
-2009,0.21,Spain,ES
-2010,0.22,Spain,ES
-2011,0.22,Spain,ES
-2012,0.23,Spain,ES
-2013,0.23,Spain,ES
-2014,0.23,Spain,ES
-2000,0.35,Hungary,HU
-2001,0.38,Hungary,HU
-2002,0.37,Hungary,HU
-2003,0.33,Hungary,HU
-2004,0.34,Hungary,HU
-2005,0.34,Hungary,HU
-2006,0.35,Hungary,HU
-2007,0.39,Hungary,HU
-2008,0.38,Hungary,HU
-2009,0.38,Hungary,HU
-2010,0.31,Hungary,HU
-2011,0.35,Hungary,HU
-2012,0.35,Hungary,HU
-2013,0.34,Hungary,HU
-2014,0.35,Hungary,HU
-2000,0.28,Finland,FI
-2001,0.33,Finland,FI
-2002,0.32,Finland,FI
-2003,0.32,Finland,FI
-2004,0.31,Finland,FI
-2005,0.31,Finland,FI
-2006,0.31,Finland,FI
-2007,0.3,Finland,FI
-2008,0.3,Finland,FI
-2009,0.29,Finland,FI
-2010,0.29,Finland,FI
-2011,0.29,Finland,FI
-2012,0.29,Finland,FI
-2013,0.3,Finland,FI
-2014,0.31,Finland,FI
-2000,0.41,Germany,DE
-2001,0.42,Germany,DE
-2002,0.43,Germany,DE
-2003,0.43,Germany,DE
-2004,0.42,Germany,DE
-2005,0.42,Germany,DE
-2006,0.43,Germany,DE
-2007,0.42,Germany,DE
-2008,0.42,Germany,DE
-2009,0.41,Germany,DE
-2010,0.39,Germany,DE
-2011,0.4,Germany,DE
-2012,0.4,Germany,DE
-2013,0.39,Germany,DE
-2014,0.4,Germany,DE
+2000,0.39,Belgium,BE
+2001,0.43,Belgium,BE
+2002,0.43,Belgium,BE
+2003,0.42,Belgium,BE
+2004,0.42,Belgium,BE
+2005,0.42,Belgium,BE
+2006,0.42,Belgium,BE
+2007,0.42,Belgium,BE
+2008,0.42,Belgium,BE
+2009,0.42,Belgium,BE
+2010,0.43,Belgium,BE
+2011,0.43,Belgium,BE
+2012,0.43,Belgium,BE
+2013,0.42,Belgium,BE
+2014,0.42,Belgium,BE
 2000,0.28,Sweden,SE
 2001,0.32,Sweden,SE
 2002,0.31,Sweden,SE
@@ -268,141 +298,6 @@
 2012,0.25,Sweden,SE
 2013,0.25,Sweden,SE
 2014,0.24,Sweden,SE
-2000,0.4,Denmark,DK
-2001,0.44,Denmark,DK
-2002,0.43,Denmark,DK
-2003,0.43,Denmark,DK
-2004,0.41,Denmark,DK
-2005,0.41,Denmark,DK
-2006,0.41,Denmark,DK
-2007,0.41,Denmark,DK
-2008,0.41,Denmark,DK
-2009,0.4,Denmark,DK
-2010,0.39,Denmark,DK
-2011,0.39,Denmark,DK
-2012,0.39,Denmark,DK
-2013,0.39,Denmark,DK
-2014,0.38,Denmark,DK
-2000,0.3,Slovenia,SI
-2001,0.32,Slovenia,SI
-2002,0.32,Slovenia,SI
-2003,0.32,Slovenia,SI
-2004,0.32,Slovenia,SI
-2005,0.32,Slovenia,SI
-2006,0.33,Slovenia,SI
-2007,0.33,Slovenia,SI
-2008,0.33,Slovenia,SI
-2009,0.33,Slovenia,SI
-2010,0.33,Slovenia,SI
-2011,0.33,Slovenia,SI
-2012,0.33,Slovenia,SI
-2013,0.33,Slovenia,SI
-2014,0.33,Slovenia,SI
-2000,0.29,Turkey,TR
-2001,0.31,Turkey,TR
-2002,0.3,Turkey,TR
-2003,0.3,Turkey,TR
-2004,0.3,Turkey,TR
-2005,0.31,Turkey,TR
-2006,0.3,Turkey,TR
-2007,0.3,Turkey,TR
-2008,0.28,Turkey,TR
-2009,0.27,Turkey,TR
-2010,0.28,Turkey,TR
-2011,0.27,Turkey,TR
-2012,0.28,Turkey,TR
-2013,0.29,Turkey,TR
-2014,0.27,Turkey,TR
-2000,0.16,Switzerland,CH
-2001,0.14,Switzerland,CH
-2002,0.15,Switzerland,CH
-2003,0.14,Switzerland,CH
-2004,0.15,Switzerland,CH
-2005,0.16,Switzerland,CH
-2006,0.16,Switzerland,CH
-2007,0.16,Switzerland,CH
-2008,0.16,Switzerland,CH
-2009,0.16,Switzerland,CH
-2010,0.16,Switzerland,CH
-2011,0.16,Switzerland,CH
-2012,0.17,Switzerland,CH
-2013,0.17,Switzerland,CH
-2014,0.17,Switzerland,CH
-2000,0.23,Czech Republic,CZ
-2001,0.22,Czech Republic,CZ
-2002,0.23,Czech Republic,CZ
-2003,0.23,Czech Republic,CZ
-2004,0.24,Czech Republic,CZ
-2005,0.24,Czech Republic,CZ
-2006,0.22,Czech Republic,CZ
-2007,0.23,Czech Republic,CZ
-2008,0.24,Czech Republic,CZ
-2009,0.22,Czech Republic,CZ
-2010,0.22,Czech Republic,CZ
-2011,0.23,Czech Republic,CZ
-2012,0.23,Czech Republic,CZ
-2013,0.23,Czech Republic,CZ
-2014,0.23,Czech Republic,CZ
-2000,0.26,Luxembourg,LU
-2001,0.27,Luxembourg,LU
-2002,0.24,Luxembourg,LU
-2003,0.25,Luxembourg,LU
-2004,0.25,Luxembourg,LU
-2005,0.26,Luxembourg,LU
-2006,0.27,Luxembourg,LU
-2007,0.28,Luxembourg,LU
-2008,0.27,Luxembourg,LU
-2009,0.26,Luxembourg,LU
-2010,0.27,Luxembourg,LU
-2011,0.28,Luxembourg,LU
-2012,0.28,Luxembourg,LU
-2013,0.3,Luxembourg,LU
-2014,0.3,Luxembourg,LU
-2000,0.28,Latvia,LV
-2001,0.28,Latvia,LV
-2002,0.29,Latvia,LV
-2003,0.29,Latvia,LV
-2004,0.29,Latvia,LV
-2005,0.29,Latvia,LV
-2006,0.29,Latvia,LV
-2007,0.29,Latvia,LV
-2008,0.28,Latvia,LV
-2009,0.28,Latvia,LV
-2010,0.31,Latvia,LV
-2011,0.31,Latvia,LV
-2012,0.31,Latvia,LV
-2013,0.3,Latvia,LV
-2014,0.29,Latvia,LV
-2000,0.13,Estonia,EE
-2001,0.14,Estonia,EE
-2002,0.15,Estonia,EE
-2003,0.16,Estonia,EE
-2004,0.16,Estonia,EE
-2005,0.16,Estonia,EE
-2006,0.18,Estonia,EE
-2007,0.2,Estonia,EE
-2008,0.19,Estonia,EE
-2009,0.2,Estonia,EE
-2010,0.19,Estonia,EE
-2011,0.2,Estonia,EE
-2012,0.2,Estonia,EE
-2013,0.19,Estonia,EE
-2014,0.2,Estonia,EE
-2000,0.29,Lithuania,LT
-2001,0.29,Lithuania,LT
-2002,0.29,Lithuania,LT
-2003,0.26,Lithuania,LT
-2004,0.28,Lithuania,LT
-2005,0.28,Lithuania,LT
-2006,0.25,Lithuania,LT
-2007,0.25,Lithuania,LT
-2008,0.23,Lithuania,LT
-2009,0.22,Lithuania,LT
-2010,0.22,Lithuania,LT
-2011,0.22,Lithuania,LT
-2012,0.22,Lithuania,LT
-2013,0.23,Lithuania,LT
-2014,0.24,Lithuania,LT
 2000,0.24,Ireland,IE
 2001,0.17,Ireland,IE
 2002,0.16,Ireland,IE
@@ -418,21 +313,36 @@
 2012,0.18,Ireland,IE
 2013,0.19,Ireland,IE
 2014,0.2,Ireland,IE
-2000,0.22,Bulgaria,BG
-2001,0.2,Bulgaria,BG
-2002,0.2,Bulgaria,BG
-2003,0.19,Bulgaria,BG
-2004,0.19,Bulgaria,BG
-2005,0.21,Bulgaria,BG
-2006,0.2,Bulgaria,BG
-2007,0.21,Bulgaria,BG
-2008,0.22,Bulgaria,BG
-2009,0.22,Bulgaria,BG
-2010,0.21,Bulgaria,BG
-2011,0.22,Bulgaria,BG
-2012,0.22,Bulgaria,BG
-2013,0.22,Bulgaria,BG
-2014,0.21,Bulgaria,BG
+2000,0.28,Latvia,LV
+2001,0.28,Latvia,LV
+2002,0.29,Latvia,LV
+2003,0.29,Latvia,LV
+2004,0.29,Latvia,LV
+2005,0.29,Latvia,LV
+2006,0.29,Latvia,LV
+2007,0.29,Latvia,LV
+2008,0.28,Latvia,LV
+2009,0.28,Latvia,LV
+2010,0.31,Latvia,LV
+2011,0.31,Latvia,LV
+2012,0.31,Latvia,LV
+2013,0.3,Latvia,LV
+2014,0.29,Latvia,LV
+2000,0.29,Turkey,TR
+2001,0.31,Turkey,TR
+2002,0.3,Turkey,TR
+2003,0.3,Turkey,TR
+2004,0.3,Turkey,TR
+2005,0.31,Turkey,TR
+2006,0.3,Turkey,TR
+2007,0.3,Turkey,TR
+2008,0.28,Turkey,TR
+2009,0.27,Turkey,TR
+2010,0.28,Turkey,TR
+2011,0.27,Turkey,TR
+2012,0.28,Turkey,TR
+2013,0.29,Turkey,TR
+2014,0.27,Turkey,TR
 2000,0.24,Romania,RO
 2001,0.25,Romania,RO
 2002,0.29,Romania,RO
@@ -448,18 +358,93 @@
 2012,0.29,Romania,RO
 2013,0.29,Romania,RO
 2014,0.28,Romania,RO
-2000,0.26,Italy,IT
-2001,0.28,Italy,IT
-2002,0.29,Italy,IT
-2003,0.28,Italy,IT
-2004,0.29,Italy,IT
-2005,0.28,Italy,IT
-2006,0.29,Italy,IT
-2007,0.29,Italy,IT
-2008,0.3,Italy,IT
-2009,0.3,Italy,IT
-2010,0.3,Italy,IT
-2011,0.31,Italy,IT
-2012,0.31,Italy,IT
-2013,0.31,Italy,IT
-2014,0.32,Italy,IT
+2000,0.4,Denmark,DK
+2001,0.44,Denmark,DK
+2002,0.43,Denmark,DK
+2003,0.43,Denmark,DK
+2004,0.41,Denmark,DK
+2005,0.41,Denmark,DK
+2006,0.41,Denmark,DK
+2007,0.41,Denmark,DK
+2008,0.41,Denmark,DK
+2009,0.4,Denmark,DK
+2010,0.39,Denmark,DK
+2011,0.39,Denmark,DK
+2012,0.39,Denmark,DK
+2013,0.39,Denmark,DK
+2014,0.38,Denmark,DK
+2000,0.23,Czech Republic,CZ
+2001,0.22,Czech Republic,CZ
+2002,0.23,Czech Republic,CZ
+2003,0.23,Czech Republic,CZ
+2004,0.24,Czech Republic,CZ
+2005,0.24,Czech Republic,CZ
+2006,0.22,Czech Republic,CZ
+2007,0.23,Czech Republic,CZ
+2008,0.24,Czech Republic,CZ
+2009,0.22,Czech Republic,CZ
+2010,0.22,Czech Republic,CZ
+2011,0.23,Czech Republic,CZ
+2012,0.23,Czech Republic,CZ
+2013,0.23,Czech Republic,CZ
+2014,0.23,Czech Republic,CZ
+2000,0.41,Germany,DE
+2001,0.42,Germany,DE
+2002,0.43,Germany,DE
+2003,0.43,Germany,DE
+2004,0.42,Germany,DE
+2005,0.42,Germany,DE
+2006,0.43,Germany,DE
+2007,0.42,Germany,DE
+2008,0.42,Germany,DE
+2009,0.41,Germany,DE
+2010,0.39,Germany,DE
+2011,0.4,Germany,DE
+2012,0.4,Germany,DE
+2013,0.39,Germany,DE
+2014,0.4,Germany,DE
+2000,0.17,Spain,ES
+2001,0.2,Spain,ES
+2002,0.2,Spain,ES
+2003,0.2,Spain,ES
+2004,0.2,Spain,ES
+2005,0.2,Spain,ES
+2006,0.2,Spain,ES
+2007,0.21,Spain,ES
+2008,0.19,Spain,ES
+2009,0.21,Spain,ES
+2010,0.22,Spain,ES
+2011,0.22,Spain,ES
+2012,0.23,Spain,ES
+2013,0.23,Spain,ES
+2014,0.23,Spain,ES
+2000,0.28,Norway,NO
+2001,0.26,Norway,NO
+2002,0.27,Norway,NO
+2003,0.26,Norway,NO
+2004,0.26,Norway,NO
+2005,0.29,Norway,NO
+2006,0.29,Norway,NO
+2007,0.3,Norway,NO
+2008,0.3,Norway,NO
+2009,0.29,Norway,NO
+2010,0.29,Norway,NO
+2011,0.29,Norway,NO
+2012,0.29,Norway,NO
+2013,0.29,Norway,NO
+2014,0.29,Norway,NO
+2000,0.26,Poland,PL
+2001,0.28,Poland,PL
+2002,0.28,Poland,PL
+2003,0.28,Poland,PL
+2004,0.28,Poland,PL
+2005,0.28,Poland,PL
+2006,0.29,Poland,PL
+2007,0.28,Poland,PL
+2008,0.25,Poland,PL
+2009,0.24,Poland,PL
+2010,0.24,Poland,PL
+2011,0.25,Poland,PL
+2012,0.25,Poland,PL
+2013,0.25,Poland,PL
+2014,0.25,Poland,PL
