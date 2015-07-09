@@ -9,7 +9,7 @@ Where in Europe do people pay the highest slice of their earnings to the tax man
 
 According to the Eurostat organization, in 2013, a single person on an average salary without children will have the highest income tax rate in Belgium - some 42.1% of his or her earnings. Germany isn't too far behind. Neighbording Danemark comes in third place.
 
-In this [visualization](https://serene-cliffs-1778.herokuapp.com/), noticed the inequalities contributions between countries. Each bar is showing the tax rate per country as a combination of income taxes and employee's social security contribution. Family allowances is not included as we only consider a single person on an average salary without children.
+In this [visualization](http://serene-cliffs-1778.herokuapp.com/), noticed the inequalities contributions between countries. Each bar is showing the tax rate per country as a combination of income taxes and employee's social security contribution. Family allowances is not included as we only consider a single person on an average salary without children.
 ## Initial Design Decision
 The **bar chart** at the top of the screen is showing the tax rate per country in an increasing order.  The taxes are a combination of both the income taxes and employee social security therefore a stacked bar chart was the most appropriate to display the information.
 In order to reflect the taxes change from year to year, a yearly sequence has been built in order to modify the bar chart.  The user can let the sequence play by itself or he can simply select a year of interest to get more delails.
@@ -71,7 +71,7 @@ To run the project, follow these steps :
 
 1. Clone the repository
 
-2. Make sure mongodb is running on default port and a db is created with the name `eurostat`.
+2. Make sure mongodb is running on default port and a db is created with the name `eurostatv2`.
 
 3. In the folder `proprocessing` run 
 
