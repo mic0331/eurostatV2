@@ -43,7 +43,7 @@ def inject_data_mongo(data, collection):
     #client = MongoClient('mongodb://localhost:27017')
     # PROD
     client = MongoClient('mongodb://mic0331:eurostatv2@ds043952.mongolab.com:43952/eurostatv2')
-    db = client.eurostat
+    db = client.eurostatv2
     db[collection].drop()
     db[collection].insert(data)
 
