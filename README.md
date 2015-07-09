@@ -60,6 +60,7 @@ This is where the raw data material from [eurostat](http://appsso.eurostat.ec.eu
 The data was initialy coming from a TSV format and they were converted into JSON. `preprocessor.py` is also responsible to upload the data in mongodb where they will be consumed by the webapp.
 
 2.**Webapp**
+
 The root directory contain the webapp developed using the `express.js` framework. The structure of the webapp is very simple to understand.  The folder `server/api` contains endpoints consumed by the webpage.  For this project only the eurostat endpoint is used.  The folder `public` is where the webpage magic is happening.  The core of the implementation of the d3.js logic is in the file `public/app/app.js`.
 
 For the reader interested to run the project locally, he should make sure mongodb, node.js and python3 are installed locally.
