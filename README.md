@@ -47,7 +47,7 @@ The mini-project is hosted on [heroku](https://www.heroku.com/) and the database
 
 The project source code folder contain two main area of interest.
 
-1. **Preprocessing**
+1.**Preprocessing**
 
 Source file :
 * [taxes.R](https://github.com/mic0331/eurostatV2/blob/master/exploration/taxes.R)
@@ -59,7 +59,7 @@ Source file :
 This is where the raw data material from [eurostat](http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=earn_nt_net&lang=en) are stored (`/proprocessing/data/earn_nt_net.tsv`). The python file `preprocessing/preprocessor.py` is used to load the initial data, manipulate them and eventually perform some cleaning.  
 The data was initialy coming from a TSV format and they were converted into JSON. `preprocessor.py` is also responsible to upload the data in mongodb where they will be consumed by the webapp.
 
-2. **Webapp**
+2.**Webapp**
 The root directory contain the webapp developed using the `express.js` framework. The structure of the webapp is very simple to understand.  The folder `server/api` contains endpoints consumed by the webpage.  For this project only the eurostat endpoint is used.  The folder `public` is where the webpage magic is happening.  The core of the implementation of the d3.js logic is in the file `public/app/app.js`.
 
 For the reader interested to run the project locally, he should make sure mongodb, node.js and python3 are installed locally.
