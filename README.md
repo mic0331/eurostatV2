@@ -1,6 +1,6 @@
 ##### Author : Michaël Lambé (mic0331 at gmail dot come)
 ## Summary
-**This project is a second iteration of this project [Eurostat1](https://github.com/mic0331/eurostat).  
+**This project is a second iteration of [Eurostat](https://github.com/mic0331/eurostat).  
 In this version, a focus has been placed on the visulization to be explonatory but also and more importantly explanatory.**
 ### Income tax rate per country
 Income tax rates vary hugely between countries and depend highly on other factors like earnings, martial status and so on.

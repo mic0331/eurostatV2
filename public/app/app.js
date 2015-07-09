@@ -616,6 +616,7 @@ Plotter annonymous function which is displaying the barchart and line chart
         // display the annotations for the line chart
         displayAnnotations: function() {
             // note, refactoring is needed for this function ...
+            // maybe this should come from the api
             var self        = this,                
                 container   = d3.select( this.lineChartContainer.containerEl ),
                 svg         = container.select("svg")
