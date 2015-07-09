@@ -6,9 +6,9 @@ Plotter annonymous function which is displaying the barchart and line chart
         // Initialize the constants and bind events.
         init: function() {
             // Production
-            //this.DATAURL_all_countries = 'http://serene-cliffs-1778.herokuapp.com/api/v1/ratio';
+            this.DATAURL_all_countries = 'http://serene-cliffs-1778.herokuapp.com/api/v1/ratio';
             // Development
-            this.DATAURL_ratio = 'http://localhost:3030/api/v1/ratio';
+            //this.DATAURL_ratio = 'http://localhost:3030/api/v1/ratio';
             this.buttonYears = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013];
             // where we store the data from the middleware
             this.data = [];   
