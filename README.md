@@ -1,75 +1,41 @@
 ##### Author : Michaël Lambé (mic0331 at gmail dot come)
 ## Summary
-### Which country has the highest tax rate?
-In which countries do high earners pay the most tax? And where do average earners pay the most?
-This **[visualization](http://radiant-basin-3159.herokuapp.com/)** show the differences between countries for the net earnings and taxes (without including the social security contributions - national insurance).
+**This project is a second iteration of this project [Eurostat1](https://github.com/mic0331/eurostat).  
+In this version, a focus has been placed on the visulization to be explonatory but also and more importantly explanatory.**
+### Income tax rate per country
+Income tax rates vary hugely between countries and depend highly on other factors like earnings, martial status and so on.
 
-At the top end of the distribution we have Danemark where single people pay 37% of gross earnings in income tax, followed by Belgium with 33%.
+Where in Europe do people pay the highest slice of their earnings to the tax man ?
 
-At the bottom we have Greece with only 11% of taxes.  This low tax rate probably explain current greek dept crisis...
+According to the Eurostat organization, in 2013, a single person on an average salary without children will have the highest income tax rate in Belgium - some 42.1% of his or her earnings. Germany isn't too far behind. Neighbording Danemark comes in third place.
 
-In a lot of the European countries tax rates are high but the provision of benefits by the state tends to be very generous compared to countries in other parts of the world.
-
-*Note: some countries was missing data for some year. The choice has been made to replace the missing value by the mean of the taxes or net earnings from all years.*
+In this [visualization](), noticed the inequalities contributions between countries. Each bar is showing the tax rate per country as a combination of income taxes and employee's social security contribution. Family allowances is not included as we only consider a single person on an average salary without children.
 ## Initial Design Decision
-The data (coming from [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=earn_nt_net&lang=en)) are available on a yearly basis therefore, it was making sence to display a multi-line chart to express the evolution / trend of the tax / net earning from year to year.
-For an individual year, the pie chart on the top show percentage in a nice way so the reader can immediatly see the ratio of tax vs. net earnings.
+The **bar chart** at the top of the screen is showing the tax rate per country in an increasing order.  The taxes are a combination of both the income taxes and employee social security therefore a stacked bar chart was the most appropriate to display the information.
+In order to reflect the taxes change from year to year, a yearly sequence has been built in order to modify the bar chart.  The user can let the sequence play by itself or he can simply select a year of interest to get more delails.
+If he wich, he can also play the sequence again if it has been stoped by simply pushing the "play all years" button.
 
-Historical data are presented with line chart because like most time-series data, the best way to represent the data is nearly always going to be a line chart.  Using a line chart we can quickly make some observations.  Is there spike for some countries ? etc. (see Danemark in 2012)  Next, as we are only concern by two categories (tax and net earnings), using a stacked bar (or normilized stacked bar) graph would be too much color on the chart.  The key message is to show the ratio and the differences amongs countries.  
+If the user select a bar on the bar-chart, the **line chart** at the bottom of the screen is showing the selected country as well as the average tax pay in the Euro zone.
+By default, if no country are selected, only the average axes is displayed. Notice that the line chart is showing all countries in background with a very light gray.
 
-When the user mouve over a dot of the line graph, the pie chart display the corresponding ratio of the selected year.  
-The choice has been made to **NOT** show the y axis to avoid an overload of information on the screen.  The user interested by a specific value of the line graph can get it when a circle is selected.
-User can choose a country by selecting an item in the combo box where a callback event is triggered to the server to retreive the needed data and refresh the charts.
-The charts are using the same base color (`hex : #403075`), a ligher and darker version of this color is used to show respectively the earnings and taxes.
+Some annotations are placed in the line chart to indicate some interesting facts about the data.  
+At first, the idea was to highlight the country of interest when an annotation was mouse-hover by the user but finally this idea was rejected because the line chart was too messy (multiple lines of different colors - and a large legend to display).
 
-The next picture show the initial version of the visualization.
+The data (coming from [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=earn_nt_net&lang=en)) are available on a yearly basis therefore, it was making sence to display a multi-line chart to express the taxes history evolution.
+
+For the average line and the selected country line, a mouse over effect is implemented to clearly see the % of rate for a year of interest.
+
+In order to re-inforce the current year of the sequence loop, a vertical line is moving with the sequence inside the line chart so the user always know at which year he is analysing the data.
+
+Finally, compare to the first iteration of the project, notice that a paragraph above all of the charts explaining where the data come from and what it represents has been included.
+
+The next picture show the final version of the visualization.
 
 ![](./public/pictures/UI_v1.png)
 
 ## Feedback
-For collecting feedback, a dedicated Monkey Survey has been open for few days.
 
-The following questions where asked :
-
-* What do you notice in the visualization?
-* What questions do you have about the data?
-* What relationships do you notice?
-* What do you think is the main takeaway from this visualization?
-* Is there something you don’t understand in the graphic?
-* How would you rate the quality of the visualization ? from very good to very bad
-* Do you have any other comments, questions, or concerns?
-* In what country do you currently reside?
-
-![](./public/pictures/survey_monkey.png)
-
-The survey (conduted for about a week between the 11th till the 16th of June) has been posted on various channel (udacity forum, reddit, twitter, google+) in order to maximized the number of feedback.
-Overall, about 10 people reply and share some interesting comments about the quality and the possible improovement of the charts ([results of the survey](feedback.md))
-
-During the survey, several actions has been taken day after day based on recommendations made by the community.
-
-1. A swap was made in the labels of the pie chart, this has been fixed immediatly.
-2. The coloring has been change to use a red / green combination that was working well for this type of visualization.
-3. A y-axis has been added for the multiple-line chart.
-4. Typos were fixed.
-5. Labels and titles were carefully re-writter to clearly explain the percentage and charts.
-
-In order to further improove the project, one suggestion was made to use a [Normalized Stacked Bar Chart](http://bl.ocks.org/mbostock/3886394).  Instead a bar chart has been created at the top of the screen to show the average tax per country so the reader can easily compare countries and see the inequalities.
-
-Finally, several people mention that social security contribution, familly allowances, etc. were key information to show in this graph.  This is also a point of concern that will be investigate later to irmpoove the chart.
-
-Last but not least, in the initial version of the project, a drop down was used to select countries.  Now with the addition of the bar chart, the reader can select an individual country by simply selecting the bar of that country.  Also, the pie chart has been put below the line chart because it is most appropriate due to the nature of the pie.  The pie is a focus of a dedicated year.  It make more sence for the reader to 1/ select the country, 2/ select the year of interest than 3/ visualize the ratio of tax/earnings.
-
-The final UI of the project is much better.  This has been confirmed by the feedback that were much better at the end of the survey campaign.
-
-UI before the addition of the bar chart:
-
-![](./public/pictures/UI_v3.png)
-
-UI after the addition of the bar chart:
-
-![](./public/pictures/UI_v4.png)
-
-Notice that the y-axis of the bar chart is using a percentage but do not show an axis from 0 to 100%.  This choice has been made to clearly emphasis the differences amongst countries.
+Feedback details for this second iteration has not been collected.
 
 ## Technological choices
 
@@ -84,6 +50,7 @@ The project source code folder contain two main area of interest.
 1. **Preprocessing**
 
 Source file :
+* [taxes.R](https://github.com/mic0331/eurostatV2/blob/master/exploration/taxes.R)
 * [preprocessor.py](https://github.com/mic0331/eurostat/blob/master/preprocessing/preprocessor.py)
 * [API](https://github.com/mic0331/eurostat/tree/master/server/api/eurostat)
 * [index.jade](https://github.com/mic0331/eurostat/blob/master/server/views/index.jade)
@@ -136,18 +103,14 @@ Then navigate to `http://localhost:4000/`
 ## Conclusion
 Finding an interesting data set and a story it tells can be the most difficult part of producing an infographic or data visualization.
 
-Data visualization is the end artifact, but it involves multiple steps – finding reliable data, getting the data in the right format, cleaning it up (an often underestimated step in the amount of time it takes!) and then finding the story you will eventually visualize.
+The first iteration of this project was clearly failing in the "explanatory" part of the visulization.  The process of finding a story and telling it is really something complex to put in place.
+I had to spend several day manipulating the data and exploring them using R in order to find something interesting to tell.
 
-Finally, the feedback received for the project were very useful and clearly this part of the project was very interesting especially considering the various point of view from prople with different background.
-
-I really enjoyed this project, it gave me the opportunity to show my background of devlopper applied to data analysis/discovery field.
+The final visualization is clearly better but not as good as I wanted to be.  For example, the annotations in the line chart are telling a story but i would prefer being able to highlight the countries of interest for the annotation.  
+Highlithing the country would make the line chart unpleasant to look at.  Several design change would be required in order to make this change possible (increase page width and positioning) unltimately requirering a third version of the project...  
 
 ## Resources
 * [Eurostat - Net earnings and tax rates (earn_net)](http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=earn_nt_net&lang=en)
 * [Eurostat - Net earnings and tax rates (metadata)](http://ec.europa.eu/eurostat/cache/metadata/en/earn_net_esms.htm)
-* [programming - how to use d3.json](https://gist.github.com/mbostock/3750941)
-* [programming - context and d3.json](http://stackoverflow.com/questions/30780654/how-to-properly-control-the-context-when-using-d3-json-event-handler/30780795?noredirect=1#comment49612132_30780795)
-* [Article - Displaying time-series data: Stacked bars, area charts or lines…you decide!](http://vizwiz.blogspot.be/2012/08/displaying-time-series-data-stacked.html)
-* [Stacked Bar Chart](http://bl.ocks.org/mbostock/3886208)
-* [Normalized Stacked Bar Chart](http://bl.ocks.org/mbostock/3886394)
-* [Article - d3: adding stuff. And, oh, understanding selections](http://www.jeromecukier.net/blog/2011/08/09/d3-adding-stuff-and-oh-understanding-selections/)
+* [Very nice visualization where I find lots of inspiration](http://www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?ref=baseball&_r=1&)
+* [Exploratory vs Explanatory analysis](http://www.storytellingwithdata.com/2014/04/exploratory-vs-explanatory-analysis.html)

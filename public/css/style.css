@@ -326,13 +326,13 @@ h4.message {
   font-family: Arial;
   fill: #999;
   text-anchor: middle;
-  pointer-events: none;
   opacity: .5;
+  cursor: pointer;
 }
 
-.g-mean-text {
+.annotation-line {
+  stroke: #000;
+  stroke-opacity: 0.15;
+  stroke-width: 1px;
   pointer-events: none;
-  font-family: Helvetica, Arial;
-  text-anchor: middle;
-  font-size: 10px;
 }

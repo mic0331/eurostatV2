@@ -1,3 +1,6 @@
+/*
+Plotter annonymous function which is displaying the barchart and line chart
+ */
 (function() {
     var Ploter = {        
         // Initialize the constants and bind events.
@@ -24,6 +27,7 @@
             this.INTERVAL = null;
             this.BUTTONS = null;
             this.change();
+            // placeholder for the barchart
             this.barChartContainer = {
                 get containerEl() {
                     return document.getElementById( 'barChart' );    
@@ -44,6 +48,7 @@
                 detailHeight    : 55,
                 detailMargin    : 10
             },
+            // placeholder for the linechart
             this.lineChartContainer = {
                 get containerEl() {
                     return document.getElementById( 'lineChart' );    
@@ -105,6 +110,7 @@
                                   .y( function( d ) { return y( d.value ); } ),
 
                 // draw one line per country :: perform a group by country
+                
                 dataGroup   = d3.nest()
                     .key(function(d) {
                             return d.country;
@@ -456,6 +462,7 @@
                 .text(function(d) { return d; });   
         },        
 
+        // event when a bar is selected in the barchart
         onClick_barChart: function(d, this_) {
             var elem = d3.select(this_).attr('label') // get the selected country
             // reset the other country selected 
@@ -483,16 +490,7 @@
             this.playYears(false);            
         },
 
-        // Helper function to randomly generate color
-        getRandomColor: function() {
-            var letters = '0123456789ABCDEF'.split('');
-                    var color = '#';
-                    for (var i = 0; i < 6; i++ ) {
-                        color += letters[Math.floor(Math.random() * 16)];
-                    }
-                    return color;
-        },
-
+        // colorized the country based on the selected bar from the bar-chart
         highlightLineForCountry: function() {
             var self        = this,                
 
@@ -595,26 +593,29 @@
                     .data(this.selectedCountries)
                 .enter().append("g")
                 .attr("class", "line-legend")
-                .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+                .attr("transform", function(d, i) { return "translate(0," + i * 18 + ")"; });
 
             legend.append("rect")
-                .attr("x", this.lineChartContainer.width-96)
-                .attr("y", 243)
-                .attr("width", 18)
-                .attr("height", 18)
+                .attr("x", this.lineChartContainer.width-76)
+                .attr("y", 266)
+                .attr("width", 16)
+                .attr("height", 16)
                 .style("fill", function(d) {
                     return d.color;
                 });            
 
             legend.append("text")
-                .attr("x", this.lineChartContainer.width-100)
-                .attr("y", 252)
+                .attr("x", this.lineChartContainer.width-80)
+                .attr("y", 276)
                 .attr("dy", ".35em")
+                .style("font-size", "12px")
                 .style("text-anchor", "end")
-                .text(function(d) { return d.data.key; });            
+                .text(function(d) {return (d.data.key === 'all') ?  "Average EU zone" : d.data.key });            
         },
 
+        // display the annotations for the line chart
         displayAnnotations: function() {
+            // note, refactoring is needed for this function ...
             var self        = this,                
                 container   = d3.select( this.lineChartContainer.containerEl ),
                 svg         = container.select("svg")
@@ -626,60 +627,144 @@
                     d3.min( this.data.lineChart, function (d) {return d.year} ), 
                     d3.max( this.data.lineChart, function (d) {return d.year} ) ]);
                 y.domain( [ 0, d3.max( this.data.lineChart, function( d ) { return d.value; } ) ] );
+
+                // annotation 1
                 
                 var txt = [
-                    "Noticed how most of these country has",
-                    "increased the taxes around late 2009 ",
-                    "where the the European debt crisis erupted"
+                    "Notice how most of the countries with low",
+                    "tax rate have increased the taxes around late ",
+                    "2009 where the the European debt crisis erupted"
                 ];
 
+                var txtContainer1 = svg.append("g")
+
                 txt.forEach(function(d, i) {
-                    svg.append("text")
-                    .data(txt)
-                    .attr("class", "g-text-annotation")
-                    .attr("x", x(new Date(2012, 0)) + 10 + self.lineChartContainer.detailWidth / 2)
-                    .attr("y", 32)
-                    .attr("dy",  i + "em" )
-                    .style("text-anchor", "end")
-                    .text(d)
-                    .on("mousemove", function(){
-                        console.log('toto');
+                    txtContainer1.append("text")
+                        .data(txt)
+                        .attr("class", "g-text-annotation")
+                        .attr("x", x(new Date(2012, 0)) + 10 + self.lineChartContainer.detailWidth / 2)
+                        .attr("y", 32)
+                        .attr("dy",  i + "em" )
+                        .style("text-anchor", "end")
+                        .text(d)                                                
+                })
+                
+                txtContainer1.on( 'mouseover', function( d ) {
+                    txtContainer1.selectAll('.g-text-annotation')
+                        .style('opacity', '1')
+                        .style('fill', "#98abc5")
+                        .style('font-weigh', "bold")
+                })
+
+                txtContainer1.on( 'mouseout', function( d ) {
+                    txtContainer1.selectAll('.g-text-annotation')
+                        .style('opacity', '.5')
+                        .style('fill', "#999")
+                        .style('font-weigh', "normal")
+                })
+
+                // annotation 2
+
+                var txt = [
+                    "Late 2009 EU Debt crisis erupted (most affected ",
+                    "country : Greece, Spain, Irland and Portugal)"
+                ];
+
+                var txtContainer2 = svg.append("g")
+
+                txt.forEach(function(d, i) {
+                    txtContainer2.append("text")
+                        .data(txt)
+                        .attr("class", "g-text-annotation")
+                        .attr("x", x(new Date(2010, 0)) + 10 + self.lineChartContainer.detailWidth / 2)
+                        .attr("y", 278)
+                        .attr("dy",  i + "em" )
+                        .style("text-anchor", "end")
+                        .text(d)
+                })
+
+                txtContainer2.append('line')
+                    .attr({
+                        'x1': x( new Date(2009 - 1, 0) ) + 20 + self.lineChartContainer.detailWidth / 2,
+                        'y1': 240,
+                        'x2': x( new Date(2009 - 1, 0) ) + 20 + self.lineChartContainer.detailWidth / 2,
+                        'y2': 270
                     })
+                    .attr("stroke", "#aaa")
+                    .attr('class', 'annotation-line');
+
+                txtContainer2.on( 'mouseover', function( d ) {
+                    txtContainer2.selectAll('.g-text-annotation')
+                        .style('opacity', '1')
+                        .style('fill', "#98abc5")
+                        .style('font-weigh', "bold")
+                    txtContainer2.selectAll('line')
+                        .style('stroke', "#98abc5")
+                        .style('stroke-opacity', 1)
                 })
 
-                var txt = [
-                    "Late 2009 EU Debt crisis",
-                    "Noticed the main country in trouble"
-                ];
-
-                txt.forEach(function(d, i) {
-                    svg.append("text")
-                    .data(txt)
-                    .attr("class", "g-text-annotation")
-                    .attr("x", x(new Date(2007, 0)) + 10 + self.lineChartContainer.detailWidth / 2)
-                    .attr("y", 250)
-                    .attr("dy",  i + "em" )
-                    .style("text-anchor", "end")
-                    .text(d)
+                txtContainer2.on( 'mouseout', function( d ) {
+                    txtContainer2.selectAll('.g-text-annotation')
+                        .style('opacity', '.5')
+                        .style('fill', "#999")
+                        .style('font-weigh', "normal")
+                    txtContainer2.selectAll('line')
+                        .style('stroke', "#999")
+                        .style('stroke-opacity', .15)
                 })
 
+                // annotation 3
+
                 var txt = [
-                    "Noticed the countries which are leading",
-                    "the top of the highest tax rate",
+                    "Notice Belgium, Germany & Denmark which",
+                    "are leading the top of the highest tax rate",
                     "These counries are those where the impact",
                     "of the crisis was the least significant"
-                ]
+                ];
+
+                var txtContainer3 = svg.append("g");
 
                 txt.forEach(function(d, i) {
-                    svg.append("text")
-                    .data(txt)
-                    .attr("class", "g-text-annotation")
-                    .attr("x", x(new Date(2004, 0)) + 10 + self.lineChartContainer.detailWidth / 2)
-                    .attr("y", 20)
-                    .attr("dy",  i + "em" )
-                    .style("text-anchor", "end")
-                    .text(d)
+                    txtContainer3.append("text")
+                        .data(txt)
+                        .attr("class", "g-text-annotation")
+                        .attr("x", x(new Date(2004, 0)) + 10 + self.lineChartContainer.detailWidth / 2)
+                        .attr("y", 20)
+                        .attr("dy",  i + "em" )
+                        .style("text-anchor", "end")
+                        .text(d)
                 })
+
+                txtContainer3.append('line')
+                    .attr({
+                        'x1': x( new Date(2005 - 1, 0) ) + 20 + self.lineChartContainer.detailWidth / 2,
+                        'y1': 40,
+                        'x2': x( new Date(2006 - 1, 0) ) + 20 + self.lineChartContainer.detailWidth / 2,
+                        'y2': 65
+                    })
+                    .attr("stroke", "#aaa")
+                    .attr('class', 'annotation-line');
+
+                txtContainer3.on( 'mouseover', function( d ) {
+                    txtContainer3.selectAll('.g-text-annotation')
+                        .style('opacity', '1')
+                        .style('fill', "#98abc5")
+                        .style('font-weigh', "bold")
+                    txtContainer3.selectAll('line')
+                        .style('stroke', "#98abc5")
+                        .style('stroke-opacity', 1)
+                })
+
+                txtContainer3.on( 'mouseout', function( d ) {
+                    txtContainer3.selectAll('.g-text-annotation')
+                        .style('opacity', '.5')
+                        .style('fill', "#999")
+                        .style('font-weigh', "normal")
+                    txtContainer3.selectAll('line')
+                        .style('stroke', "#999")
+                        .style('stroke-opacity', .15)
+                })
+                
         },
 
         // draw the vertical line for the line chart
@@ -724,6 +809,7 @@
             });
         },
 
+        // update the bar chart data at every tick
         updateBarData: function() {
             // parse the data for the new year...
             this.parseBarData(null, this.YEAR);
@@ -814,6 +900,7 @@
             }            
         },
 
+        // parse the data for the line chart
         parseLineData: function(json) {
             var self = this;
             // reset the container
@@ -869,6 +956,7 @@
             });
         },
 
+        // parse the data for the bar chart
         parseBarData: function(json, year) {
             var self = this;
             if (json == null){
@@ -897,6 +985,7 @@
             });             
         },  
 
+        // timer used to play the year sequence
         playYears: function(status) {
             var self = this;
             if (status) {
@@ -979,7 +1068,4 @@
 
     // this is where the magic is initiated !
     Ploter.init();
-
 })();
-
-

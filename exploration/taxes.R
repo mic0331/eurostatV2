@@ -1,3 +1,8 @@
+#
+# This script was used to explore the data in order to find a story, 
+# trend, message for the final project
+#
+
 # set working directory to the current location of this file
 require(ggplot2)
 library(dplyr)

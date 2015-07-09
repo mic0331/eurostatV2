@@ -42,7 +42,7 @@ def inject_data_mongo(data, collection):
     # DEV
     client = MongoClient('mongodb://localhost:27017')
     # PROD
-    #client = MongoClient('mongodb://mic0331:eurostat@ds047672.mongolab.com:47672/eurostat')
+    #client = MongoClient('mongodb://mic0331:eurostatv2@ds043952.mongolab.com:43952/eurostatv2')
     db = client.eurostat
     db[collection].drop()
     db[collection].insert(data)
@@ -223,13 +223,15 @@ if __name__ == "__main__":
     data = fillna(data)
     #############################################################
     # stage 6 :: build tax ratio per country / year // optional, produce a CSV for data exploration
-    ratios = build_ratio(data, do_csv = True)
+    ratios = build_ratio(data, do_csv = False)
     #############################################################    
     # load the data per country
-    inject_data_mongo(data, 'eurn_nt_nets')
+    # this collection was used for interation 1
+    inject_data_mongo(data, 'eurn_nt_nets') 
     # load the mapping table
     inject_data_mongo(get_mapping(), 'mappings')
     # load the ratio data in mongo
+    # collection used for iteration 2
     inject_data_mongo(ratios, 'ratios')
     
 
