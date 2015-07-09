@@ -94,7 +94,7 @@ To run the project, follow these steps :
 
 6. The api can be access at `http://localhost:3030/api/v1/ratio`.
 
-7. [OPTIONAL] During the devlopment phase of this project, `browsersync` has been used in order to have immediate feedback on the screen when a code modication was made. To run the project in development mode, simply run :
+7. [OPTIONAL] During the development phase of this project, `browsersync` has been used in order to have immediate feedback on the screen when a code modication was made. To run the project in development mode, simply run :
 
     `>>> gulp`
 
