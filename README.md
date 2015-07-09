@@ -51,10 +51,10 @@ The project source code folder contain two main area of interest.
 
 Source file :
 * [taxes.R](https://github.com/mic0331/eurostatV2/blob/master/exploration/taxes.R)
-* [preprocessor.py](https://github.com/mic0331/eurostat/blob/master/preprocessing/preprocessor.py)
+* [preprocessor.py](https://github.com/mic0331/eurostatV2/blob/master/preprocessing/preprocessor.py)
 * [API](https://github.com/mic0331/eurostatV2/tree/master/server/api/ratio)
-* [index.jade](https://github.com/mic0331/eurostat/blob/master/server/views/index.jade)
-* [app.js](https://github.com/mic0331/eurostat/blob/master/public/app/app.js)
+* [index.jade](https://github.com/mic0331/eurostatV2/blob/master/server/views/index.jade)
+* [app.js](https://github.com/mic0331/eurostatV2/blob/master/public/app/app.js)
 
 This is where the raw data material from [eurostat](http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=earn_nt_net&lang=en) are stored (`/proprocessing/data/earn_nt_net.tsv`). The python file `preprocessing/preprocessor.py` is used to load the initial data, manipulate them and eventually perform some cleaning.  
 The data was initialy coming from a TSV format and they were converted into JSON. `preprocessor.py` is also responsible to upload the data in mongodb where they will be consumed by the webapp.
