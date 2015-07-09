@@ -42,7 +42,7 @@ Feedback details for this second iteration has not been collected.
 *Note: This section is far beyond the scope of the the project, it is intended for reader interested to contribute on the project or just interested to deploy the fullstack solution locally.*
 
 The web-based visualization has been implemented using an API developped for this project.  
-The technology used are **mongodb, node.js, python, html (jade template), css and D3.js**.
+The technology used are **R, mongodb, node.js, python, html (jade template), css and D3.js**.
 The mini-project is hosted on [heroku](https://www.heroku.com/) and the database on [mongolab](https://mongolab.com/).  Both cloud solution are offering a free tier ideal for this proof-of-concept type of project.
 
 The project source code folder contain two main area of interest.
@@ -52,7 +52,7 @@ The project source code folder contain two main area of interest.
 Source file :
 * [taxes.R](https://github.com/mic0331/eurostatV2/blob/master/exploration/taxes.R)
 * [preprocessor.py](https://github.com/mic0331/eurostat/blob/master/preprocessing/preprocessor.py)
-* [API](https://github.com/mic0331/eurostat/tree/master/server/api/eurostat)
+* [API](https://github.com/mic0331/eurostat/tree/master/server/api/ratio)
 * [index.jade](https://github.com/mic0331/eurostat/blob/master/server/views/index.jade)
 * [app.js](https://github.com/mic0331/eurostat/blob/master/public/app/app.js)
 
