@@ -52,7 +52,7 @@ The project source code folder contain two main area of interest.
 Source file :
 * [taxes.R](https://github.com/mic0331/eurostatV2/blob/master/exploration/taxes.R)
 * [preprocessor.py](https://github.com/mic0331/eurostat/blob/master/preprocessing/preprocessor.py)
-* [API](https://github.com/mic0331/eurostat/tree/master/server/api/ratio)
+* [API](https://github.com/mic0331/eurostatV2/tree/master/server/api/ratio)
 * [index.jade](https://github.com/mic0331/eurostat/blob/master/server/views/index.jade)
 * [app.js](https://github.com/mic0331/eurostat/blob/master/public/app/app.js)
 
