@@ -12,5 +12,5 @@ module.exports = {
     port: process.env.PORT || 80,
 
     // Mongodb connection option.
-    db: 'mongodb://mic0331:eurostat@ds047672.mongolab.com:47672/eurostat'
+    db: 'mongodb://mic0331:eurostatv2@ds043952.mongolab.com:43952/eurostatv2'
 };

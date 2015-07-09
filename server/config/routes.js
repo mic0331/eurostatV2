@@ -4,9 +4,10 @@ module.exports = function(app) {
     var apiBaseUrl = "/api/v1";
 
     app.get('/uptime', status());    
-
-    app.use(apiBaseUrl + '/eurostat', require('../api/eurostat'));
-    app.use(apiBaseUrl + '/mapping', require('../api/mapping'));
+    // we dynamically load the api
+    // The first two end-points are not needed for iteration 2 of the project
+    //app.use(apiBaseUrl + '/eurostat', require('../api/eurostat')); 
+    //app.use(apiBaseUrl + '/mapping', require('../api/mapping'));
     app.use(apiBaseUrl + '/ratio', require('../api/ratio'));
 
     app.all(apiBaseUrl + '/*', function(req, res, next) {

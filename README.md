@@ -9,7 +9,7 @@ Where in Europe do people pay the highest slice of their earnings to the tax man
 
 According to the Eurostat organization, in 2013, a single person on an average salary without children will have the highest income tax rate in Belgium - some 42.1% of his or her earnings. Germany isn't too far behind. Neighbording Danemark comes in third place.
 
-In this [visualization](), noticed the inequalities contributions between countries. Each bar is showing the tax rate per country as a combination of income taxes and employee's social security contribution. Family allowances is not included as we only consider a single person on an average salary without children.
+In this [visualization](https://serene-cliffs-1778.herokuapp.com/), noticed the inequalities contributions between countries. Each bar is showing the tax rate per country as a combination of income taxes and employee's social security contribution. Family allowances is not included as we only consider a single person on an average salary without children.
 ## Initial Design Decision
 The **bar chart** at the top of the screen is showing the tax rate per country in an increasing order.  The taxes are a combination of both the income taxes and employee social security therefore a stacked bar chart was the most appropriate to display the information.
 In order to reflect the taxes change from year to year, a yearly sequence has been built in order to modify the bar chart.  The user can let the sequence play by itself or he can simply select a year of interest to get more delails.
@@ -92,7 +92,7 @@ To run the project, follow these steps :
 
 5. Navigate to `http://localhost:3030/`
 
-6. The api can be access at `http://localhost:3030/api/v1/eurostat/basic/country/BE` where the final parameter can be changed according to the country of interest.
+6. The api can be access at `http://localhost:3030/api/v1/ratio`.
 
 7. [OPTIONAL] During the devlopment phase of this project, `browsersync` has been used in order to have immediate feedback on the screen when a code modication was made. To run the project in development mode, simply run :
 
@@ -104,11 +104,12 @@ Then navigate to `http://localhost:4000/`
 Finding an interesting data set and a story it tells can be the most difficult part of producing an infographic or data visualization.
 
 The first iteration of this project was clearly failing in the "explanatory" part of the visulization.  The process of finding a story and telling it is really something complex to put in place.
-I had to spend several day manipulating the data and exploring them using R in order to find something interesting to tell.
+I had to spend several days manipulating the data and exploring them using R in order to find something interesting to tell.
 
 The final visualization is clearly better but not as good as I wanted to be.  For example, the annotations in the line chart are telling a story but i would prefer being able to highlight the countries of interest for the annotation.  
 Highlithing the country would make the line chart unpleasant to look at.  Several design change would be required in order to make this change possible (increase page width and positioning) unltimately requirering a third version of the project...  
 
+Finally, the `app.js` getting very large and would require some serious refactoring in order to make this project ready for third iteration.  
 ## Resources
 * [Eurostat - Net earnings and tax rates (earn_net)](http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=earn_nt_net&lang=en)
 * [Eurostat - Net earnings and tax rates (metadata)](http://ec.europa.eu/eurostat/cache/metadata/en/earn_net_esms.htm)
